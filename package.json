@@ -1,0 +1,22 @@
+{
+  "name": "estrutura-desenvolvimento",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "sass --no-source-map --style compressed public/css",
+    "watch": "sass --no-source-map --watch ./src/sass:public/css",
+    "server": "nodemon app.js -e ejs,js,css,html,jpg,png,scss",
+    "dev": "concurrently \"npm run watch\" \"npm run server\""
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-ejs-layouts": "^2.5.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "nodemon": "^2.0.15",
+    "sass": "^1.50.0"
+  }
+}
