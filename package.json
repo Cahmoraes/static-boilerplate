@@ -7,7 +7,7 @@
     "build": "sass --no-source-map --style compressed public/css",
     "watch": "sass --no-source-map --watch ./src/sass:public/css",
     "server": "nodemon app.js -e ejs,js,css,html,jpg,png,scss",
-    "dev": "concurrently \"npm run watch\" \"npm run server\""
+    "dev": "concurrently \"npm run server\" \"npm run watch\""
   },
   "dependencies": {
     "ejs": "^3.1.6",
@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "concurrently": "^7.1.0",
+    "easy-livereload": "^1.4.3",
     "nodemon": "^2.0.15",
     "sass": "^1.50.0"
   }
